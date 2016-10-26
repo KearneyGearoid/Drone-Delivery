@@ -9,8 +9,16 @@
 
 <h1>Use Case 4: Create Delivery</h1>
 <p>The user can create delivery by selecting the create delivery button. Information taken from the will be User Location, Weight, Scale of Package
-, Delivery Location, Collection Location if different form current location.</p>
+, Delivery Location, Collection Location. A drone is then dispatched from system</p>
 
+<h1>Casual Use Case 4: Create Delivery</h1>
+<p>The requester initiates this by selecting the create delivery button. The requester is then asked to enter a number of details. This includes co-ordinates of collection location, the co-ordinates of delivery location,
+weight of package and dimensions of package. When the requester presses confirm, the system will start to validate these details. Checking if the ordinates are in the systems delivery zone. If not the system returned to
+the requester with this information. If true then the system validates the size and weight of package. If the package is too big or heavy then the system returns to the requester with this information. If true then the
+requester is asked to confirm the delivery once more. The system then dispatches a drone of suitable spec to the location of collection. The system adds adds the delivery to the requesters dashboard which will allow them
+to view the progress at any time. Once the drone has safely delivered the package, the requester is notified. The system removes the delivery from the requesters dashboard. The drone is then returned to nearest base for
+recharging. The drone's status is set to active. This drone can now be used in the creation of a new delivery.
+  </p>
 
 </body>
 
