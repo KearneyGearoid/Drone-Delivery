@@ -11,6 +11,67 @@
 <p>The requester initiates this by selecting the create group delivery button.  For each delivery location the requester will be asked to enter the weight of
 package, dimensions of package, location of delivery, location of collection. The system validates this and assigns a drone to the delivery. The requesters
 dashboard is updated with the new delivery.  </p>
+    
+<h2>Fully Dressed Use Case 6: Create Group Delivery</h2>
+<p>Use Case Name: Create Group Delivery <br>
+    Priority: 3<br>
+    Source: Users<br>
+    Primary Business Actor: Users<br>
+    Goal in Context: Users create a group delivery through the system
+    Description: This use case will allow users to create a group delivery<br>
+    Typical Scenario:<br>
+    <table>
+  <tr>
+    <th>Actor Action</th>
+    <th>System Response</th>
+  </tr>
+        
+    <tr>
+    <td>Step 1: User invokes Create Group Delivery Function</td>
+    <td>Step 2: System retrieves details that need to be entered and displays on UI</td>
+  
+  </tr>
+         <tr>
+    <td>Step 3: User enters new group delivery details:
+        <ul>
+            <li>Names of Users</li>
+            <li>Locations of Delivery</li>
+            <li>Locations of Collection</li>
+            <li>Phone Numbers</li>
+            <li>Packages ID</li>
+            <li>Packages Names</li>
+            <li>Packages Weights</li>
+            <li>Packages Dimensions</li>
+      
+        </ul>
+        
+             </td>
+  </tr>
+        
+        <tr>
+    <td>Step 4: User confirms deliverys to be created</td>
+   <td>Step 5: System Validates data entered: 
+            
+            <ul>
+                <li>All fields must be entered</li>
+                <li>Package Weights and Dimensions must be accurate</li>
+        
+        </ul>
+       </td>
+        <td>Step 6: System assignes correct drone to delivery</td>
+        <td>Step 7: System displays conformation message</td>
+        <td>Step 8: System Database is updated with new group delivery</td>
+        <td>Step 9: System clears UI</td>
+       
+    
+  </tr>
+       
+        
+        </table>
+    <br>Conclusions: A new Group Delivery is added<br>
+        Post Conditions: A Group Delivery will be made from a certain
+        location and delivered to a certain location.
+    </p>
 
 
 
