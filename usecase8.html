@@ -5,14 +5,38 @@
     <title>Use Case 8</title>
 </head>
 <body>
-<img src="https://images-na.ssl-images-amazon.com/images/G/01//112715/image-2._CR0,8,1340,762_.jpg" style="height:500px;"><h1>Drone Delivery Service</h1></img>
+<h1>Drone Delivery Service</h1>
 
-<h1>Brief Use Case 8: Track Delivery</h1>
+<h2>Brief Use Case 8: Track Delivery</h2>
 <p>This use case allows the user to track their delivery</p>
     
 <p>When the user wishes to track their delivery, they will open the Track Delivery method and enter in the unigue identifier code that they are supplied. Form here the system will search the database for their package and return where the package is and what depos it has passed through allready.</p>
 
 
+<h3>Fully Dressed Use Case 8: Track Delivery</h3>
+	<p><strong>Actors:</strong>  Registered User, Event System</p>
+	<p><strong>Goal in Context:</strong> Registered users be able to track a delivery made with the system</p>
+	<p><strong>Scope:</strong> A drone delivery system</p>
+	<p><strong>Level:</strong> User goal</p>
+	<p><strong>Stakeholders and Interests:</strong></p>
+	<p>Registered User - Wants to be able to view delivery and track progress.</p>
+	<p><strong>Pre Conditions:</strong>User has a delivery on the system. Database is accessible</p>
+	<p><strong>Post Conditions:</strong> None</p>
+	<p><strong>Success Scenario:</strong> <ol>
+    <li><strong>Registered User: </strong>Clicks the ‘Track Delivery’ button.</li>
+	<li><strong>Registered User: </strong> Inputs unique delivery code details.</li>
+	<li><strong>Delivery System: </strong> Validates user input.</li>
+    <li><strong>Delivery System: </strong> System gets information on the delivery</li>
+    <li><strong>Delivery System: </strong> System tracks the last location of drone</li>
+    <li><strong>Delivery System: </strong> System estimates time of arrival based on current location and delivery address</li>
+    <li><strong>Delivery System: </strong> System displays all current information on the delivery</li>
+    </ol>
+    <p><strong>Extensions:</strong> <ul style="list-style-type: none;">
+    <li><strong>2a.</strong>  The user does not know the unique tracking code</li>
+
+    </ol>
+
+    
 
 </body>
 
