@@ -15,24 +15,20 @@ dashboard is updated with the new delivery.  </p>
 <h2>Fully Dressed Use Case 6: Create Group Delivery</h2>
 <p>Use Case Name: Create Group Delivery <br>
     Priority: 3<br>
-    Source: Users<br>
-    Primary Business Actor: Users<br>
-    Goal in Context: Users create a group delivery through the system
-    Description: This use case will allow users to create a group delivery<br>
+    Source: Registered Users<br>
+    Primary Business Actor: Registered Users<br>
+    Goal in Context: For Registered Users to create a group delivery through the system   <br>
+    Description: This use case will allow registered users to create a group delivery<br>    </p>
+	<p><strong>Stakeholders and Interests:</strong></p>
+	<p>Registered User - Wants to be able to create a group delivery with another registered user.</p>
+	<p><strong>Pre Conditions:</strong>Both Users Must Be Registered</p>
+	<p><strong>Post Conditions:</strong> None</p>
     Typical Scenario:<br>
-    <table>
-  <tr>
-    <th>Actor Action</th>
-    <th>System Response</th>
-  </tr>
-        
-    <tr>
-    <td>Step 1: User invokes Create Group Delivery Function</td>
-    <td>Step 2: System retrieves details that need to be entered and displays on UI</td>
+    <ol>
+    <li>Registered User: invokes Create Group Delivery Function</li>
+    <li>Delivery System: System retrieves details that need to be entered and displays on UI</li>
   
-  </tr>
-         <tr>
-    <td>Step 3: User enters new group delivery details:
+    <li>Registered User: User enters new group delivery details:
         <ul>
             <li>Names of Users</li>
             <li>Locations of Delivery</li>
@@ -44,30 +40,25 @@ dashboard is updated with the new delivery.  </p>
             <li>Packages Dimensions</li>
       
         </ul>
+        </li>
         
-             </td>
-  </tr>
-        
-        <tr>
-    <td>Step 4: User confirms deliverys to be created</td>
-   <td>Step 5: System Validates data entered: 
+             
+    <li>Registered User: User confirms deliverys to be created</li>
+   <li>Delivery System: System Validates data entered: 
             
             <ul>
                 <li>All fields must be entered</li>
                 <li>Package Weights and Dimensions must be accurate</li>
         
         </ul>
-       </td>
-        <td>Step 6: System assignes correct drone to delivery</td>
-        <td>Step 7: System displays conformation message</td>
-        <td>Step 8: System Database is updated with new group delivery</td>
-        <td>Step 9: System clears UI</td>
+       </li>
+        <li>Delivery System: System assignes correct drone to delivery</li>
+        <li>Registered User: User recieves confirmation message that delivery was successful</li>
+        <li>Delivery System: System Database is updated with new group delivery</li>
+        
        
     
-  </tr>
-       
-        
-        </table>
+  </ol>
     <br>Conclusions: A new Group Delivery is added<br>
         Post Conditions: A Group Delivery will be made from a certain
         location and delivered to a certain location.
