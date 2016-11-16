@@ -7,32 +7,36 @@
 <body>
 <img src="https://images-na.ssl-images-amazon.com/images/G/01//112715/image-2._CR0,8,1340,762_.jpg" style="height:500px;"><h1>Drone Delivery Service</h1></img>
 
-<h1>Use Case 14: Track Drones</h1>
-<p>A drone needs to be tracked on its location in order to keep track of it.</p>
+<h1>Use Case 14: Drone Status</h1>
+<p>Drone status updates the system about the status of a drone</p>
     
-<p>Track drone acts as an airtraffic control function, being able to track drones location and status. The system administrator will run the function and the program will search through the system to find each drones location and what stage of a delivery it is at, what charge it has left, identifier for the drone and where its next destination is.</p>   
+<p>Drone status is used to locate and update the status of a drone. The Drone Fleet Manager will run the function and search for a drone, the program will search through the system to find the drone's information and request an up date on the drones location, stage of a delivery and what charge it has left from the drone</p>   
     
 
 <h2>Track Drone</h2>
-    <p><strong>Primary Actor:</strong> System Administrator</p>
-    <p><strong>Goal in Context:</strong> A system administrator to veiw comprehesive data on drone locations and status.</p>
+    <p><strong>Primary Actor:</strong> Drone Fleet Manager</p>
+    <p><strong>Goal in Context:</strong> A Drone Fleet Manager to veiw comprehesive data on drone locations and status.</p>
     <p><strong>Scope:</strong> Business - It is required as part of a drone delivery system</p>
     <p><strong>Level:</strong> User goal</p>
 	<p><strong>Stakeholders and Interests</strong></p>
-	<p>Systmem Administrator: wants to see where the drone(s) currently in an easy way.</p>
-	<p><strong>Pre Conditions:</strong>The user is an Administrator</p>
+	<p>Drone Fleet Manager: wants to see where the drone(s) currently in an easy way.</p>
+	<p><strong>Pre Conditions:</strong>The user is a Drone Fleet Manager</p>
 	<p><strong>Post Conditions:</strong> None</p>
 	<p><strong>Success Scenario:</strong>
     <ol>
-        <li>Administrator: runs the 'Track Drones' function.</li>
-        <li>System: searches for each registered on the system.</li>
-        <li>Systen: gatheres each drones status and location.</li>
-        <li>Administrator: searches for a drone</li>
-        </li>System: searches for drone and displays the information</li>
+        <li>Manager: runs the 'Drone Status' function.</li>
+        <li>System: Displays displays the interface</li>
+        <li>Manager: enteres in a drones identification</li>
+        <li>System: searches for a drone in the system</li>
+        </li>Manager: confirms that it is the drone they are looking for</li>
+        <li>System: sends out a request to the drone to update its status</li>
+        <li>Drone: replies with status on location, charge and stage of delivery</li>
+        <li>System: retirieves the information and displays it</li>
+        <li>Manager: closes function</li>
     
     <p>Extentions:</p>
-    <li>2a: there are no drones registered on the system.</li>
-    <li>4a: the administrator serahces for a drone that is not`registered on the system</li>
+    <li>3a: there are no drone registered on the system with that identifier.</li>
+    <li>8a: the system does not retrieve a response</li>
     </ol>
         
 
