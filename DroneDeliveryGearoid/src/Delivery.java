@@ -2,16 +2,20 @@
  * Created by Gearoid on 22/11/2016.
  */
 public class Delivery {
-        int deliveryId = 0;
+
+        private static int numberOfDeliverys = 1;
+        public int deliveryId = 1;
         String deliveryLocation;
         String collectionLocation;
         int weight;
 
-    public Delivery(int deliveryId, String deliveryLocation, String collectionLocation, int weight) {
-        this.deliveryId = deliveryId;
-        this.deliveryLocation = deliveryLocation;
-        this.collectionLocation = collectionLocation;
-        this.weight = weight;
+    public Delivery(String deliveryLocation, String collectionLocation, int weight) {
+        setDeliveryId(deliveryId);
+        setDeliveryLocation(deliveryLocation);
+        setCollectionLocation(collectionLocation);
+        setWeight(weight);
+
+        deliveryId =  numberOfDeliverys++;
     }
 
     public int getDeliveryId() {
