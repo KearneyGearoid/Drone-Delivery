@@ -50,7 +50,13 @@ public class DriverClass {
 
             System.out.print(newDelivery.getDroneId());
 
+            TrackDelivery.addDelivery(newDelivery);
+
         }
+
+
+        String searchDroneDetails = TrackDelivery.searchDeliveries(1);
+        System.out.println(searchDroneDetails);
 
 
 
