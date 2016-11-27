@@ -1,17 +1,30 @@
 
 public class Drone {
-    public int droneId = 0;
+    private static int numberOfDrones = 1;
+    public int droneId = 1;
     public int loadCapacity;
     public int range;
     public int speed;
     public String status;
 
-    public Drone(int droneId, int loadCapacity, int range, int speed, String status) {
-        this.droneId = droneId++;
-        this.loadCapacity = loadCapacity;
-        this.range = range;
-        this.speed = speed;
-        this.status = status;
+    public Drone() {
+        setDroneId(droneId);
+        setLoadCapacity(0);
+        setRange(0);
+        setSpeed(0);
+        setStatus("Inactive");
+
+        droneId =  numberOfDrones++;
+    }
+
+    public Drone( int loadCapacity, int range, int speed, String status) {
+        setDroneId(droneId);
+        setLoadCapacity(loadCapacity);
+        setRange(range);
+        setSpeed(speed);
+        setStatus(status);
+
+        droneId =  numberOfDrones++;
     }
 
     public int getDroneId() {

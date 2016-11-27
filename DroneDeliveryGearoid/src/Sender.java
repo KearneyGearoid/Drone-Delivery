@@ -5,9 +5,9 @@ public class Sender {
     public String username;
     public String password;
     public String address;
-    public int phone;
+    public String phone;
 
-    public Sender(String name, String username, String password, String address, int phone) {
+    public Sender(String name, String username, String password, String address, String phone) {
         this.name = name;
         this.username = username;
         this.password = password;
@@ -48,11 +48,11 @@ public class Sender {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
