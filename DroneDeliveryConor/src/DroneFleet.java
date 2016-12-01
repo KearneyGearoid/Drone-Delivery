@@ -6,11 +6,11 @@ import java.util.LinkedList;
  */
 public class DroneFleet {
 
-    static LinkedList<Drone> drones = new LinkedList<>();
+    LinkedList<Drone> drones = new LinkedList<>();
 
-    public static Drone searchDrone(int Id){
+    public  Drone searchDrone(Drone drone){
         for(Iterator i = drones.iterator(); i.hasNext();){
-            Drone drone = (Drone)i.next();
+            drone = (Drone) i.next();
         }
 
         return null;
