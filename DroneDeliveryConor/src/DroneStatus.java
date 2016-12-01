@@ -3,9 +3,15 @@
  */
 public class DroneStatus {
 
-    public Drone searchDrone(int droneId){
+    private DroneFleet droneFleet;
 
-        return DroneFleet.searchDrone(droneId);
+    public DroneStatus(DroneFleet droneFleet) {
+        this.droneFleet = droneFleet;
+    }
+
+    public Drone searchDrone(Drone drone){
+
+        return droneFleet.searchDrone(drone);
 
     }
 
