@@ -8,17 +8,17 @@ public class GroupDelivery {
     private String deliveryName;
     private String deliveryLocation;
     private String collectionLocation;
-    private double packagesWeight;
-    private double packagesDimensions;
+    private List<Double> packagesWeight;
+    private List<Double> packagesDimensions;
     private double deliveryCost;
 
-    public GroupDelivery(int deliveryId,String deliveryName, String deliveryLocation, String collectionLocation, double packagesWeight, double packagesDimensions, double deliveryCost) {
+    public GroupDelivery(int deliveryId, String deliveryName, String deliveryLocation, String collectionLocation, List<Double> packagesWeight, List<Double> packagesDimensions, double deliveryCost) {
         this.deliveryId = deliveryId;
         this.deliveryName = deliveryName;
         this.deliveryLocation = deliveryLocation;
         this.collectionLocation = collectionLocation;
-        this.packagesWeight = packagesWeight;
-        this.packagesDimensions = packagesDimensions;
+        this.packagesWeight = new LinkedList<>();
+        this.packagesDimensions = new LinkedList<>();
         this.deliveryCost = deliveryCost;
     }
 
@@ -39,17 +39,22 @@ public class GroupDelivery {
         return collectionLocation;
     }
 
-    public double getPackagesWeight() {
+    public List<Double> getPackagesWeight() {
         return packagesWeight;
     }
 
-    public double getPackagesDimensions() {
+    public List<Double> getPackagesDimensions() {
         return packagesDimensions;
     }
 
     public double getDeliveryCost() {
         return deliveryCost;
     }
+
+
+
+
+
 
 
     public void setDeliveryCost(double deliveryCost) {
