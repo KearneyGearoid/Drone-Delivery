@@ -1,3 +1,7 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Aoife Horgan on 02/11/2016.
  */
@@ -11,8 +15,8 @@ public class TrackGroupDelivery {
         deliveries = new LinkedList();
     }
 
-    public void addGroupDelivery(int id, String deliveryName, String deliveryLocation, String collectionLocation, List<Double> packagesWeight, List<Double> packagesDimensions, double deliveryCost) {
-        GroupDelivery delivery = new GroupDelivery(id, deliveryName, deliveryLocation, collectionLocation, packagesWeight, packagesDimensions, deliveryCost);
+    public void addGroupDelivery(int id, String deliveryName, String deliveryLocation, String collectionLocation, List<Double> packagesWeight, List<Double> packagesDimensions, double deliveryCost, int numDeliveries) {
+        GroupDelivery delivery = new GroupDelivery(id, deliveryName, deliveryLocation, collectionLocation, packagesWeight, packagesDimensions, deliveryCost, numDeliveries);
         deliveries.add(delivery);
 
     }
@@ -22,7 +26,7 @@ public class TrackGroupDelivery {
 
 
             GroupDelivery d = (GroupDelivery) i.next();
-            if (d.getDeliveryId==deliveryId) {
+            if (d.getDeliveryId()==deliveryId) {
                 return d;
             }
         }
@@ -66,5 +70,5 @@ public class TrackGroupDelivery {
 
 
 
-}
+
 
