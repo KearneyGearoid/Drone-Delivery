@@ -1,12 +1,10 @@
-import java.util.List;
 
 /**
  * Created by Aoife Horgan on 18/11/2016.
  */
-public class GroupDelivery extends RegisteredUser {
+public class GroupDelivery {
 
     private int deliveryId;
-    private List<RegisteredUser> users;
     private String deliveryName;
     private String deliveryLocation;
     private String collectionLocation;
@@ -14,8 +12,8 @@ public class GroupDelivery extends RegisteredUser {
     private double packagesDimensions;
     private double deliveryCost;
 
-    public GroupDelivery(List<RegisteredUser> users, String deliveryName, String deliveryLocation, String collectionLocation, double packagesWeight, double packagesDimensions, double deliveryCost) {
-        users = new LinkedList<>();
+    public GroupDelivery(int deliveryId,String deliveryName, String deliveryLocation, String collectionLocation, double packagesWeight, double packagesDimensions, double deliveryCost) {
+        this.deliveryId = deliveryId;
         this.deliveryName = deliveryName;
         this.deliveryLocation = deliveryLocation;
         this.collectionLocation = collectionLocation;
@@ -27,10 +25,6 @@ public class GroupDelivery extends RegisteredUser {
 
     public int getDeliveryId() {
         return deliveryId;
-    }
-
-    public List<RegisteredUser> getUsers() {
-        return users;
     }
 
     public String getDeliveryName() {
@@ -58,17 +52,11 @@ public class GroupDelivery extends RegisteredUser {
     }
 
 
-    public void addUser(String username,String userFullName,String address,String password,int phoneNumber){
-        RegisteredUser user = new RegisteredUser(username, userFullName, address,password,phoneNumber);
-       users.add(user);
-
-    }
-
-
-
     public void setDeliveryCost(double deliveryCost) {
         this.deliveryCost = deliveryCost;
     }
+
+
 }
 
 
