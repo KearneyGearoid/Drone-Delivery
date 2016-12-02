@@ -11,7 +11,7 @@ public class TrackGroupDelivery {
         deliveries = new LinkedList();
     }
 
-    public void addGroupDelivery(int id, String deliveryName, String deliveryLocation, String collectionLocation, double packagesWeight, double packagesDimensions, double deliveryCost) {
+    public void addGroupDelivery(int id, String deliveryName, String deliveryLocation, String collectionLocation, List<double> packagesWeight, List<double> packagesDimensions, double deliveryCost) {
         GroupDelivery delivery = new GroupDelivery(id, deliveryName, deliveryLocation, collectionLocation, packagesWeight, packagesDimensions, deliveryCost);
         deliveries.add(delivery);
 
@@ -37,7 +37,7 @@ public class TrackGroupDelivery {
             String deliveryName = searchDelivery.getDeliveryName();
             if ((deliveryName != null) && (!deliveryName.equals("")) &&
 
-                    (!deliveryName.equals(d.getDeliveryName())))
+                    (!deliveryName.equals(d.getDeliveryName().toLowerCase())))
                 continue;
             int id = searchDelivery.getDeliveryId();
             if ((id != null) &&
