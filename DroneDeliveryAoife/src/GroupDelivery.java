@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Aoife Horgan on 18/11/2016.
@@ -11,8 +13,10 @@ public class GroupDelivery {
     private List<Double> packagesWeight;
     private List<Double> packagesDimensions;
     private double deliveryCost;
+    private int numDeliveries;
 
-    public GroupDelivery(int deliveryId, String deliveryName, String deliveryLocation, String collectionLocation, List<Double> packagesWeight, List<Double> packagesDimensions, double deliveryCost) {
+
+    public GroupDelivery(int deliveryId, String deliveryName, String deliveryLocation, String collectionLocation, List<Double> packagesWeight, List<Double> packagesDimensions, double deliveryCost, int numDeliveries) {
         this.deliveryId = deliveryId;
         this.deliveryName = deliveryName;
         this.deliveryLocation = deliveryLocation;
@@ -20,6 +24,7 @@ public class GroupDelivery {
         this.packagesWeight = new LinkedList<>();
         this.packagesDimensions = new LinkedList<>();
         this.deliveryCost = deliveryCost;
+        this.numDeliveries = numDeliveries;
     }
 
 
@@ -49,6 +54,10 @@ public class GroupDelivery {
 
     public double getDeliveryCost() {
         return deliveryCost;
+    }
+
+    public int getNumDeliveries(){
+        return numDeliveries;
     }
 
 
