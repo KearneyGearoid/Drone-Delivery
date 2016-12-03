@@ -3,9 +3,9 @@
  */
 public class Drone {
 
-    double loadCapacity, range, speed;
-    String make, model;
-    int droneId;
+    private double loadCapacity, range, speed;
+    private String make, model;
+    private int droneId;
 
     public Drone(double loadCapacity, double range, double speed, String make, String model, int droneId) {
         this.loadCapacity = loadCapacity;
