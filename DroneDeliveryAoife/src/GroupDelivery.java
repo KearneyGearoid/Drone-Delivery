@@ -1,4 +1,3 @@
-import java.util.List;
 
 /**
  * Created by Aoife Horgan on 18/11/2016.
@@ -13,9 +12,7 @@ public class GroupDelivery {
     private double packagesDimensions;
     private double deliveryCost;
 
-
-    public GroupDelivery(int deliveryId, String deliveryName, String deliveryLocation, String collectionLocation,
-                         double packagesWeight, double packagesDimensions, double deliveryCost) {
+    public GroupDelivery(int deliveryId,String deliveryName, String deliveryLocation, String collectionLocation, double packagesWeight, double packagesDimensions, double deliveryCost) {
         this.deliveryId = deliveryId;
         this.deliveryName = deliveryName;
         this.deliveryLocation = deliveryLocation;
@@ -24,6 +21,7 @@ public class GroupDelivery {
         this.packagesDimensions = packagesDimensions;
         this.deliveryCost = deliveryCost;
     }
+
 
     public int getDeliveryId() {
         return deliveryId;
@@ -54,10 +52,11 @@ public class GroupDelivery {
     }
 
 
-
     public void setDeliveryCost(double deliveryCost) {
         this.deliveryCost = deliveryCost;
     }
+
+
 }
 
 
