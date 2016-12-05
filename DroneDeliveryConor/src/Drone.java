@@ -3,8 +3,11 @@
  */
 public class Drone {
 
-    private double loadCapacity, range, speed;
-    private String make, model;
+    private double loadCapacity;
+    private double range;
+    private double speed;
+    private String make;
+    private String model;
     private int droneId;
 
     public Drone(double loadCapacity, double range, double speed, String make, String model, int droneId) {
