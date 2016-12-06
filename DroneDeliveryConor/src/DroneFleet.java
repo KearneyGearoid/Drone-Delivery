@@ -20,11 +20,7 @@ public class DroneFleet {
     }
 
     public void addDrone(Drone drone){
-
-    }
-
-    public void getDrone(int droneID){
-
+        drones.add(drone);
     }
 
     public void removeDrone(Drone drone){
