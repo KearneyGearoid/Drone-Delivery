@@ -24,7 +24,11 @@ public class DroneFleet {
     }
 
     public void removeDrone(Drone drone){
+        drones.remove(drone);
+    }
 
+    public void getDrone(Drone drone){
+        drones.get(drone.getDroneId());
     }
 
     public void sendStatusRequest(Drone drone) {
