@@ -9,9 +9,12 @@ public class DroneFleet {
 
     public List<Drone> drones = new LinkedList<>();
 
-    public  Drone searchDrone(Drone drone){
+    public  Drone searchDrone(Drone droneSearch){
         for(Iterator i = drones.iterator(); i.hasNext();){
-            drone = (Drone) i.next();
+            Drone drone = (Drone) i.next();
+            if(droneSearch.getDroneId() == drone.getDroneId()){
+                return drone;
+            }
         }
         return null;
     }
