@@ -27,4 +27,9 @@ public class DroneFleet {
 
     }
 
+    public void sendStatusRequest(Drone drone) {
+
+        drone.replyStatusRequest();
+
+    }
 }
