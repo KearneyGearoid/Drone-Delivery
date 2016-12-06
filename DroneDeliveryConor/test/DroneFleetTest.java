@@ -19,26 +19,55 @@ public class DroneFleetTest {
         System.out.println("addDrone()");
 
         DroneFleet instance = new DroneFleet();
+        DroneSpec droneSpec;
+        Drone drone;
+
+        droneSpec = new DroneSpec(12.5,50,30,"DJI","Phantom");
+        drone = new Drone(1,droneSpec);
+        instance.addDrone(drone);
+
+        droneSpec = new DroneSpec(15.3,40,60,"Yuneec","Typhoon");
+        drone = new Drone(2,droneSpec);
+        instance.addDrone(drone);
+
+        droneSpec = new DroneSpec(10,70,20,"Parrot","Debop");
+        drone = new Drone(3,droneSpec);
+        instance.addDrone(drone);
+
+        DroneSpec expDroneSpec = new DroneSpec(15.3,40,60,"Yuneec","Typhoon");
+        Drone expDrone = new Drone (2,expDroneSpec);
+
+        Drone resultDrone = instance.searchDrone(expDrone);
+
+        assertTrue(expDrone.equals(resultDrone));
     }
 
     @org.junit.Test
     public void addDrone() throws Exception {
         System.out.println("addDrone()");
+
+        DroneFleet instance = new DroneFleet();
     }
 
     @org.junit.Test
     public void getDrone() throws Exception {
         System.out.println("getDrone()");
+
+        DroneFleet instance = new DroneFleet();
     }
 
     @org.junit.Test
     public void removeDrone() throws Exception {
         System.out.println("addRemoveDrone()");
+
+        DroneFleet instance = new DroneFleet();
     }
 
     @org.junit.Test
     public void sendStatusRequest() throws Exception {
         System.out.println("sendStatusRequest()");
+
+        DroneFleet instance = new DroneFleet();
     }
 
 }
