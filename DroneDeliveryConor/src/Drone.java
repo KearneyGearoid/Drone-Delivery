@@ -3,58 +3,15 @@
  */
 public class Drone {
 
-    double loadCapacity, range, speed;
-    String make, model;
-    int droneId;
+    private int droneId;
+    private DroneSpec spec;
 
-    public Drone(double loadCapacity, double range, double speed, String make, String model, int droneId) {
-        this.loadCapacity = loadCapacity;
-        this.range = range;
-        this.speed = speed;
-        this.make = make;
-        this.model = model;
+    public Drone(int droneId, DroneSpec spec) {
         this.droneId = droneId;
+        this.spec = spec;
     }
 
-    public double getLoadCapacity() {
-        return loadCapacity;
-    }
-
-    public void setLoadCapacity(double loadCapacity) {
-        this.loadCapacity = loadCapacity;
-    }
-
-    public double getRange() {
-        return range;
-    }
-
-    public void setRange(double range) {
-        this.range = range;
-    }
-
-    public double getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
+    public DroneSpec getSpec(){return spec; }
 
     public int getDroneId() {
         return droneId;
