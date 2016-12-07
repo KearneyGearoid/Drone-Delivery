@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.List;
 
 public class Drone {
     private static int numberOfDrones = 1;
@@ -6,6 +8,9 @@ public class Drone {
     public int range;
     public int speed;
     public String status;
+
+
+    public String make;
 
     public Drone() {
         setDroneId(droneId);
@@ -17,12 +22,13 @@ public class Drone {
         droneId =  numberOfDrones++;
     }
 
-    public Drone( int loadCapacity, int range, int speed, String status) {
+    public Drone( int loadCapacity, int range, int speed, String status, String make) {
         setDroneId(droneId);
         setLoadCapacity(loadCapacity);
         setRange(range);
         setSpeed(speed);
         setStatus(status);
+        setMake(make);
 
         droneId =  numberOfDrones++;
     }
@@ -66,4 +72,30 @@ public class Drone {
     public void setStatus(String status) {
         this.status = status;
     }
+
+
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public static int availableDrones(List<Drone> drones, int weight){
+
+        int availableDrone = 0;
+
+        for (Drone element : drones) {
+
+            if (weight <= element.getLoadCapacity() && element.getStatus().equals("Active")) {
+                System.out.println("Available Drone is " + element.getDroneId() + "\n ");
+                availableDrone = element.getDroneId();
+                break;
+            }
+
+        }
+        return availableDrone;
+    }
+
 }
