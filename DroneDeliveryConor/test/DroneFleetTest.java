@@ -39,7 +39,7 @@ public class DroneFleetTest {
 
         Drone resultDrone = instance.searchDrone(expDrone);
 
-        assertTrue(expDrone.equals(resultDrone));
+        assertEquals(expDrone.getDroneId(),resultDrone.getDroneId());
     }
 
     @org.junit.Test
@@ -68,6 +68,17 @@ public class DroneFleetTest {
         System.out.println("sendStatusRequest()");
 
         DroneFleet instance = new DroneFleet();
+        DroneSpec droneSpec;
+        Drone drone;
+        String response;
+
+        droneSpec = new DroneSpec(10,70,20,"Parrot","Debop");
+        drone = new Drone(3,droneSpec);
+        instance.addDrone(drone);
+
+        response = instance.sendStatusRequest(drone);
+
+        assertTrue(response.equals("I am ok"));
     }
 
 }

@@ -31,9 +31,9 @@ public class DroneFleet {
         drones.get(drone.getDroneId());
     }
 
-    public void sendStatusRequest(Drone drone) {
+    public String sendStatusRequest(Drone drone) {
 
-        drone.replyStatusRequest();
+        return drone.replyStatusRequest();
 
     }
 }
