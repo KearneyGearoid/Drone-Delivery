@@ -3,6 +3,7 @@
 import javax.swing.*;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Gearoid on 27/11/2016.
@@ -20,7 +21,8 @@ public class DriverClass {
 
         Drone drone1 = new Drone(100, 50, 40, "Active", "DJI 100");
         Drone drone2 = new Drone(200, 50, 40, "Active", "DJI 200");
-        LinkedList<Drone> drones = new LinkedList<>();
+
+        List<Drone> drones = new LinkedList<>();
 
         drones.add(drone1);
         drones.add(drone2);
@@ -56,11 +58,12 @@ public class DriverClass {
 
 
         String searchDroneDetails = TrackDelivery.searchDeliveries(1);
+
         System.out.println(searchDroneDetails);
 
 
 
 
 
-    }
+   }
 }
