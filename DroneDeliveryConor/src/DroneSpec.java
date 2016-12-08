@@ -6,10 +6,10 @@ public class DroneSpec {
     private double loadCapacity;
     private double range;
     private double speed;
-    private String make;
-    private String model;
+    private Make make;
+    private Model model;
 
-    public DroneSpec(double loadCapacity, double range, double speed, String make, String model) {
+    public DroneSpec(double loadCapacity, double range, double speed, Make make, Model model) {
         this.loadCapacity = loadCapacity;
         this.range = range;
         this.speed = speed;
@@ -41,19 +41,19 @@ public class DroneSpec {
         this.speed = speed;
     }
 
-    public String getMake() {
+    public Make getMake() {
         return make;
     }
 
-    public void setMake(String make) {
+    public void setMake(Make make) {
         this.make = make;
     }
 
-    public String getModel() {
+    public Model getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(Model model) {
         this.model = model;
     }
 

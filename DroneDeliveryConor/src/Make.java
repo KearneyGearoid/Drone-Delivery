@@ -3,12 +3,13 @@
  */
 public enum Make {
 
-    DJI, PARROT;
+    DJI, PARROT, YUNEEC;
 
     public String toString(){
         switch(this){
             case DJI: return "DJI";
             case PARROT: return "Parrot";
+            case YUNEEC: return "Yuneec";
         }
 
         return "not on system";
