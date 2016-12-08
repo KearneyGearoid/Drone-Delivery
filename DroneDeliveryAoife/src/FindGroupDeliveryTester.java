@@ -21,8 +21,8 @@ public class FindGroupDeliveryTester{
 
         dimensions.add(15.6);
         dimensions.add(10.0);
-
-        GroupDelivery deliverySample = new GroupDelivery(1,"Sample Delivery","Tralee" ,"Killarney" ,weights,dimensions,40.00,1);
+        GroupDeliverySpec spec = new GroupDeliverySpec(DeliveryLocation.KILLARNEY,DeliveryCollection.CORK,weights,dimensions);
+        GroupDelivery deliverySample = new GroupDelivery(1,"Sample Delivery",2,40.00,spec);
 
 
         List deliveryMatching = delivery.search(deliverySample);
@@ -37,12 +37,5 @@ public class FindGroupDeliveryTester{
             System.out.println("No deliveries");
 
     }
-    private static void initializeInventory(TrackGroupDelivery inventory) {
-        inventory.addGroupDelivery(2,"Sample Delivery","Tralee" ,"Killarney" ,weights,dimensions,40.00,1);
-        inventory.addGroupDelivery(2,"Sample Delivery","Killarney" ,"Tralee" ,weights,dimensions,40.00,2);
-        inventory.addGroupDelivery(3,"Sample Delivery","Cork" ,"Tralee" ,weights,dimensions,40.00,2);
-        inventory.addGroupDelivery(4,"Sample Delivery","Mayo" ,"Tralee" ,weights,dimensions,40.00,1);
-        inventory.addGroupDelivery(5,"Sample Delivery","Dublin" ,"Tralee" ,weights,dimensions,40.00,2);
 
-    }
 }
