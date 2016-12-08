@@ -3,12 +3,13 @@
  */
 public enum Model {
 
-    PHANTOM, TYPHOON;
+    PHANTOM, TYPHOON, DEBOP;
 
     public String toString(){
         switch(this){
             case PHANTOM: return "Phantom";
             case TYPHOON: return "Typhoon";
+            case DEBOP: return "Debop";
         }
 
         return "not on system";

@@ -1,3 +1,5 @@
+import com.sun.media.sound.ModelStandardTransform;
+
 import static org.junit.Assert.*;
 
 /**
@@ -22,19 +24,19 @@ public class DroneFleetTest {
         DroneSpec droneSpec;
         Drone drone;
 
-        droneSpec = new DroneSpec(12.5,50,30,"DJI","Phantom");
+        droneSpec = new DroneSpec(12.5,50,30,Make.DJI,Model.PHANTOM);
         drone = new Drone(1,droneSpec);
         instance.addDrone(drone);
 
-        droneSpec = new DroneSpec(15.3,40,60,"Yuneec","Typhoon");
+        droneSpec = new DroneSpec(15.3,40,60,Make.YUNEEC, Model.TYPHOON);
         drone = new Drone(2,droneSpec);
         instance.addDrone(drone);
 
-        droneSpec = new DroneSpec(10,70,20,"Parrot","Debop");
+        droneSpec = new DroneSpec(10,70,20,Make.PARROT,Model.DEBOP);
         drone = new Drone(3,droneSpec);
         instance.addDrone(drone);
 
-        DroneSpec expDroneSpec = new DroneSpec(15.3,40,60,"Yuneec","Typhoon");
+        DroneSpec expDroneSpec = new DroneSpec(15.3,40,60,Make.YUNEEC,Model.TYPHOON);
         Drone expDrone = new Drone (2,expDroneSpec);
 
         Drone resultDrone = instance.searchDrone(expDrone);
@@ -72,7 +74,7 @@ public class DroneFleetTest {
         Drone drone;
         String response;
 
-        droneSpec = new DroneSpec(10,70,20,"Parrot","Debop");
+        droneSpec = new DroneSpec(10,70,20,Make.PARROT,Model.DEBOP);
         drone = new Drone(3,droneSpec);
         instance.addDrone(drone);
 
