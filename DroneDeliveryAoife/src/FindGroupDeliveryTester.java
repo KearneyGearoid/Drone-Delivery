@@ -13,7 +13,7 @@ public class FindGroupDeliveryTester{
     public static void main(String[] args){
 
         TrackGroupDelivery delivery = new TrackGroupDelivery();
-        //initializeTrackGroupDelivery(delivery);
+        initializeTrackGroupDelivery(delivery);
         weights = new LinkedList<>();
         dimensions = new LinkedList<>();
         weights.add(40.27);
