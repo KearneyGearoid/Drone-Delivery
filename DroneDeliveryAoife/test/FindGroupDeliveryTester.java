@@ -7,23 +7,18 @@ import java.util.List;
  */
 
 public class FindGroupDeliveryTester{
-
-    public static List<Double> weights;
-    public static List<Double> dimensions;
     public static void main(String[] args){
 
         TrackGroupDelivery delivery = new TrackGroupDelivery();
         //initializeTrackGroupDelivery(delivery);
-        weights = new LinkedList<>();
-        dimensions = new LinkedList<>();
+        List<Double> weights = new LinkedList<>();
         weights.add(40.27);
         weights.add(20.87);
-
+        List<Double> dimensions = new LinkedList<>();
         dimensions.add(15.6);
         dimensions.add(10.0);
 
-        GroupDelivery deliverySample = new GroupDelivery(1,"Sample Delivery","Tralee" ,"Killarney" ,weights,dimensions,40.00,1);
-
+        GroupDelivery deliverySample = new GroupDelivery(1,"Sample Delivery","Tralee" ,"Killarney" ,weights,dimensions,40.00);
 
         List deliveryMatching = delivery.search(deliverySample);
         if(!deliveryMatching.isEmpty()){
@@ -35,14 +30,6 @@ public class FindGroupDeliveryTester{
             }
         }else
             System.out.println("No deliveries");
-
-    }
-    private static void initializeInventory(TrackGroupDelivery inventory) {
-        inventory.addGroupDelivery(2,"Sample Delivery","Tralee" ,"Killarney" ,weights,dimensions,40.00,1);
-        inventory.addGroupDelivery(2,"Sample Delivery","Killarney" ,"Tralee" ,weights,dimensions,40.00,2);
-        inventory.addGroupDelivery(3,"Sample Delivery","Cork" ,"Tralee" ,weights,dimensions,40.00,2);
-        inventory.addGroupDelivery(4,"Sample Delivery","Mayo" ,"Tralee" ,weights,dimensions,40.00,1);
-        inventory.addGroupDelivery(5,"Sample Delivery","Dublin" ,"Tralee" ,weights,dimensions,40.00,2);
 
     }
 }
