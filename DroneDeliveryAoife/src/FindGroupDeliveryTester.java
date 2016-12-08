@@ -37,5 +37,17 @@ public class FindGroupDeliveryTester{
             System.out.println("No deliveries");
 
     }
+    private static void initializeTrackGroupDelivery(TrackGroupDelivery inventory) {
+        GroupDeliverySpec spec;
+        inventory.addGroupDelivery(2, "Sample Delivery",
+               spec = new GroupDeliverySpec(DeliveryLocation.KILLARNEY,DeliveryCollection.CORK,weights,dimensions),40.00,2);
+        inventory.addGroupDelivery(3, "Sample Delivery",
+                spec = new GroupDeliverySpec(DeliveryLocation.CLARE,DeliveryCollection.CORK,weights,dimensions),40.00,2);
+        inventory.addGroupDelivery(4, "Sample Delivery",
+                spec = new GroupDeliverySpec(DeliveryLocation.TRALEE,DeliveryCollection.CORK,weights,dimensions),40.00,2);
+        inventory.addGroupDelivery(5, "Sample Delivery",
+                spec = new GroupDeliverySpec(DeliveryLocation.KILLARNEY,DeliveryCollection.LIMERICK,weights,dimensions),40.00,2);
+
+    }
 
 }
