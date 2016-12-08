@@ -38,16 +38,8 @@ public class TrackGroupDelivery {
         List matchingDeliveries = new LinkedList<>();
         for (Iterator i = deliveries.iterator(); i.hasNext(); ) {
             GroupDelivery d = (GroupDelivery) i.next();
-            String deliveryName = searchDelivery.getDeliveryName();
-            if ((deliveryName != null) && (!deliveryName.equals("")) &&
+            if(d.getDeliveryName().matches(String.valueOf(searchDelivery)))
 
-                    (!deliveryName.equals(d.getDeliveryName().toLowerCase())))
-                continue;
-            int id = searchDelivery.getDeliveryId();
-            if ((id != 0) &&
-
-                    (id != d.getDeliveryId()))
-                continue;
             matchingDeliveries.add(d);
 
         }
