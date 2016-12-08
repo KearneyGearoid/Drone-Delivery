@@ -15,7 +15,7 @@ public class TrackGroupDelivery {
         deliveries = new LinkedList();
     }
 
-    public void addGroupDelivery(int id, String deliveryName, String deliveryLocation, GroupDeliverySpec spec, double deliveryCost, int numDeliveries) {
+    public void addGroupDelivery(int id, String deliveryName, GroupDeliverySpec spec, double deliveryCost, int numDeliveries) {
 
         GroupDelivery delivery = new GroupDelivery(id, deliveryName,numDeliveries,deliveryCost,spec);
         deliveries.add(delivery);
