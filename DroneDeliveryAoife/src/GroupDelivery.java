@@ -8,25 +8,18 @@ public class GroupDelivery {
 
     private int deliveryId;
     private String deliveryName;
-    private String deliveryLocation;
-    private String collectionLocation;
-    private List<Double> packagesWeight;
-    private List<Double> packagesDimensions;
-    private double deliveryCost;
     private int numDeliveries;
+    private double deliveryCost;
+    GroupDeliverySpec spec;
 
 
-    public GroupDelivery(int deliveryId, String deliveryName, String deliveryLocation, String collectionLocation, List<Double> packagesWeight, List<Double> packagesDimensions, double deliveryCost, int numDeliveries) {
+    public GroupDelivery(int deliveryId, String deliveryName, int numDeliveries, double deliveryCost, GroupDeliverySpec spec) {
         this.deliveryId = deliveryId;
         this.deliveryName = deliveryName;
-        this.deliveryLocation = deliveryLocation;
-        this.collectionLocation = collectionLocation;
-        this.packagesWeight = new LinkedList<>();
-        this.packagesDimensions = new LinkedList<>();
-        this.deliveryCost = deliveryCost;
         this.numDeliveries = numDeliveries;
+        this.deliveryCost = deliveryCost;
+        this.spec = spec;
     }
-
 
     public int getDeliveryId() {
         return deliveryId;
@@ -36,41 +29,20 @@ public class GroupDelivery {
         return deliveryName;
     }
 
-    public String getDeliveryLocation() {
-        return deliveryLocation;
-    }
-
-    public String getCollectionLocation() {
-        return collectionLocation;
-    }
-
-    public List<Double> getPackagesWeight() {
-        return packagesWeight;
-    }
-
-    public List<Double> getPackagesDimensions() {
-        return packagesDimensions;
+    public int getNumDeliveries() {
+        return numDeliveries;
     }
 
     public double getDeliveryCost() {
         return deliveryCost;
     }
 
-    public int getNumDeliveries(){
-        return numDeliveries;
-    }
-
-
-
-
-
-
-
     public void setDeliveryCost(double deliveryCost) {
         this.deliveryCost = deliveryCost;
     }
-
-
+    public GroupDeliverySpec getSpec() {
+        return spec;
+    }
 }
 
 
