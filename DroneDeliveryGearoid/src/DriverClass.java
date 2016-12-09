@@ -19,8 +19,8 @@ public class DriverClass {
 
         Sender sender1 = new Sender("Conor Kearns", "conor01", "conor1", "Killarney, Kerry, Ireland", "0879916328");
 
-        Drone drone1 = new Drone(100, 50, 40, "Active", "DJI 100");
-        Drone drone2 = new Drone(200, 50, 40, "Active", "DJI 200");
+        Drone drone1 = new Drone(100, 50, 40, "Active", Make.DJI100);
+        Drone drone2 = new Drone(200, 50, 40, "Active", Make.DJI250);
 
         List<Drone> drones = new LinkedList<>();
 
@@ -32,17 +32,9 @@ public class DriverClass {
         weight = Integer.parseInt(JOptionPane.showInputDialog("Parcel Weight: "));
         username = JOptionPane.showInputDialog("Username: ");
 
-        int availableDrone = 0;
+        int availableDrone = Drone.availableDrones(drones,weight) ;
 
-        for (Drone element : drones) {
 
-            if (weight <= element.getLoadCapacity() && element.getStatus().equals("Active")) {
-                System.out.println("Available Drone is " + element.getDroneId() + "\n ");
-                availableDrone = element.getDroneId();
-                break;
-            }
-
-        }
 
         if(availableDrone <= 0)
         {
