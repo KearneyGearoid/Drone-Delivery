@@ -8,13 +8,16 @@ public class Delivery {
         String deliveryLocation;
         String collectionLocation;
         int weight;
+        int droneId;
+        String usernameCustomer;
 
-    public Delivery(String deliveryLocation, String collectionLocation, int weight) {
+    public Delivery(String deliveryLocation, String collectionLocation, int weight,String usernameCustomer, int droneId) {
         setDeliveryId(deliveryId);
         setDeliveryLocation(deliveryLocation);
         setCollectionLocation(collectionLocation);
         setWeight(weight);
-
+        setUsernameCustomer(usernameCustomer);
+        setDroneId(droneId);
         deliveryId =  numberOfDeliverys++;
     }
 
@@ -49,4 +52,23 @@ public class Delivery {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
+
+    public int getDroneId() {
+        return droneId;
+    }
+
+    public void setDroneId(int droneId) {
+        this.droneId = droneId;
+    }
+
+    public String getUsernameCustomer() {
+        return usernameCustomer;
+    }
+
+    public void setUsernameCustomer(String usernameCustomer) {
+        this.usernameCustomer = usernameCustomer;
+    }
+
+
 }
