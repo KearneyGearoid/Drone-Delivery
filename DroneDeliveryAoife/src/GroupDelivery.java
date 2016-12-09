@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Aoife Horgan on 18/11/2016.
@@ -6,22 +8,18 @@ public class GroupDelivery {
 
     private int deliveryId;
     private String deliveryName;
-    private String deliveryLocation;
-    private String collectionLocation;
-    private double packagesWeight;
-    private double packagesDimensions;
+    private int numDeliveries;
     private double deliveryCost;
+    GroupDeliverySpec spec;
 
-    public GroupDelivery(int deliveryId,String deliveryName, String deliveryLocation, String collectionLocation, double packagesWeight, double packagesDimensions, double deliveryCost) {
+
+    public GroupDelivery(int deliveryId, String deliveryName, int numDeliveries, double deliveryCost, GroupDeliverySpec spec) {
         this.deliveryId = deliveryId;
         this.deliveryName = deliveryName;
-        this.deliveryLocation = deliveryLocation;
-        this.collectionLocation = collectionLocation;
-        this.packagesWeight = packagesWeight;
-        this.packagesDimensions = packagesDimensions;
+        this.numDeliveries = numDeliveries;
         this.deliveryCost = deliveryCost;
+        this.spec = spec;
     }
-
 
     public int getDeliveryId() {
         return deliveryId;
@@ -31,32 +29,20 @@ public class GroupDelivery {
         return deliveryName;
     }
 
-    public String getDeliveryLocation() {
-        return deliveryLocation;
-    }
-
-    public String getCollectionLocation() {
-        return collectionLocation;
-    }
-
-    public double getPackagesWeight() {
-        return packagesWeight;
-    }
-
-    public double getPackagesDimensions() {
-        return packagesDimensions;
+    public int getNumDeliveries() {
+        return numDeliveries;
     }
 
     public double getDeliveryCost() {
         return deliveryCost;
     }
 
-
     public void setDeliveryCost(double deliveryCost) {
         this.deliveryCost = deliveryCost;
     }
-
-
+    public GroupDeliverySpec getSpec() {
+        return spec;
+    }
 }
 
 

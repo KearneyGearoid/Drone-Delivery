@@ -1,3 +1,7 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Aoife Horgan on 02/11/2016.
  */
@@ -11,8 +15,9 @@ public class TrackGroupDelivery {
         deliveries = new LinkedList();
     }
 
-    public void addGroupDelivery(int id, String deliveryName, String deliveryLocation, String collectionLocation, List<double> packagesWeight, List<double> packagesDimensions, double deliveryCost) {
-        GroupDelivery delivery = new GroupDelivery(id, deliveryName, deliveryLocation, collectionLocation, packagesWeight, packagesDimensions, deliveryCost);
+    public void addGroupDelivery(int id, String deliveryName, GroupDeliverySpec spec, double deliveryCost, int numDeliveries) {
+
+        GroupDelivery delivery = new GroupDelivery(id, deliveryName,numDeliveries,deliveryCost,spec);
         deliveries.add(delivery);
 
     }
@@ -22,7 +27,7 @@ public class TrackGroupDelivery {
 
 
             GroupDelivery d = (GroupDelivery) i.next();
-            if (d.getDeliveryId().equals(deliveryId)) {
+            if (d.getDeliveryId()==deliveryId) {
                 return d;
             }
         }
@@ -30,23 +35,16 @@ public class TrackGroupDelivery {
         return null;
     }
 
-    public GroupDelivery search(GroupDelivery searchDelivery) {
-
+    public List search(GroupDelivery searchDelivery) {
+        List matchingDeliveries = new LinkedList<>();
         for (Iterator i = deliveries.iterator(); i.hasNext(); ) {
             GroupDelivery d = (GroupDelivery) i.next();
-            String deliveryName = searchDelivery.getDeliveryName();
-            if ((deliveryName != null) && (!deliveryName.equals("")) &&
+            if(d.getDeliveryName().matches(String.valueOf(searchDelivery)))
 
-                    (!deliveryName.equals(d.getDeliveryName().toLowerCase())))
-                continue;
-            int id = searchDelivery.getDeliveryId();
-            if ((id != null) &&
-
-                    (!id = d.getDeliveryId()))
-                continue;
+            matchingDeliveries.add(d);
 
         }
-        return null;
+        return matchingDeliveries;
     }
 }
 
@@ -65,5 +63,5 @@ public class TrackGroupDelivery {
 
 
 
-}
+
 
