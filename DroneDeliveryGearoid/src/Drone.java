@@ -8,9 +8,7 @@ public class Drone {
     public int range;
     public int speed;
     public String status;
-
-
-    public String make;
+    public Make make;
 
     public Drone() {
         setDroneId(droneId);
@@ -22,7 +20,7 @@ public class Drone {
         droneId =  numberOfDrones++;
     }
 
-    public Drone( int loadCapacity, int range, int speed, String status, String make) {
+    public Drone( int loadCapacity, int range, int speed, String status, Make make) {
         setDroneId(droneId);
         setLoadCapacity(loadCapacity);
         setRange(range);
@@ -73,12 +71,11 @@ public class Drone {
         this.status = status;
     }
 
-
-    public String getMake() {
+    public Make getMake() {
         return make;
     }
 
-    public void setMake(String make) {
+    public void setMake(Make make) {
         this.make = make;
     }
 
